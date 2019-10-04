@@ -40,7 +40,7 @@ def dfsmapping(viskey):
         vcycle.append(viskey)  # 将第一个节点添加到list链
         if mapping[viskey] in mapplinglist and mapping[viskey] not in Visit:#判断值是否是另一个点的键 且该点是新点
             if mapping[mapping[viskey]] not in vcycle:
-                dfsmapping(mapping[viskey])
+                dfsmapping(mapping[viskey])#开始递归找节点
             else:
                 if mapping[mapping[viskey]] == vcycle[0]:
                     vcycle.append(mapping[viskey])
